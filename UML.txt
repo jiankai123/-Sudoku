@@ -1,0 +1,5 @@
++solutionMethod:SolutionMethod
+-attribute:string
++applyValue()
++solvePuzzle()
++outputValues()
