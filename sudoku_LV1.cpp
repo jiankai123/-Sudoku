@@ -2,20 +2,26 @@
 #include <iostream>
 using namespace std;
 
-/*sudoku_LV1::sudoku_LV1() {
+sudoku_LV1::sudoku_LV1() {
+	x = 0;
+	y = 0;
 	element = 0;
 }
-sudoku_LV1::sudoku_LV1(int newElement) {
+sudoku_LV1::sudoku_LV1(int newX, int newY, int newElement) {
+	int x = newX;
+	int y = newY;
 	element = newElement;
-}*/
+}
 void sudoku_LV1::setElement(int newElement) {
 	element = newElement;
 }
 int sudoku_LV1::getElement() {
 	return element;
 }
-void setPlayerEnterNumber(int newX, int newY, int newElement) {
-
+void sudoku_LV1::setPlayerEnterNumber(int newX, int newY, int newElement) {
+	x = newX;
+	y = newY;
+	element = newElement;
 }
 
 void sudoku_LV1::printRules() {
@@ -25,6 +31,18 @@ void sudoku_LV1::printRules() {
 	cout << "rule 3- The sum of every single row and column  must equal 10." << endl;
 	cout << "rule 4- When you want to change the sudoku's number. Please enter x(row),y(column),number" << endl;
 	cout << endl;
+}
+void sudoku_LV1::setX(int newX) {
+	x = newX;
+}
+int sudoku_LV1::getX() {
+	return x;
+}
+void sudoku_LV1::setY(int newY) {
+	y = newY;
+}
+int sudoku_LV1::getY() {
+	return y;
 }
 /*void sudoku_LV1::setSudoList() {
 	sudoList[0] = 0;
