@@ -16,8 +16,10 @@ int main() {
 		return 0;
 	}
 	else {
+		sudoku_LV1::printRules();
+
 		//string sudo_list[4][4] = { {"2","-1","1","-1"},{"3", "-1","2","-1"},{"-1","2","-1","1"},{"-1","3","-1","2"} };
-		sudoku_LV1 sudo_list[16];
+		sudoku_LV1 sudo_list[16] = {};
 
 		sudo_list[0].setElement(2);
 		sudo_list[1].setElement(-1);
@@ -36,14 +38,16 @@ int main() {
 		sudo_list[14].setElement(-1);
 		sudo_list[15].setElement(2);
 
-		for (int i = 0; i < 15; i++) {
-			if ((i + 1) % 4 == 0 || i != 0)
+		for (int i = 0; i <= 15; i++) {
+			if (i % 4 == 0 && i != 0)
 				cout << endl;
-			else if (sudo_list[i].getElement() == -1) 
-				cout << "  ";
+			 if (sudo_list[i].getElement() == -1) 
+				cout << " ? ";
 			else 
 				cout << " " << sudo_list[i].getElement() << " ";
 		}
+
+
 
 
 		/*for (int i = 0; i < 4; i++) {
