@@ -5,6 +5,7 @@ public:
 	static void printRules();
 	static void printSudoku();
 	static void printXYrule();
+	static void Print();
 	//void setList(int);
 	//int getList();
 private:

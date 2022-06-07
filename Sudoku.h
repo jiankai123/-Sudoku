@@ -13,7 +13,7 @@ public:
 	//int check();
 private:
 	//static int sudoList[][4];
-	int getSudolist();
+	//int getSudolist();
 	int x;
 	int y;
 	int element;

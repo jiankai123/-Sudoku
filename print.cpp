@@ -3,12 +3,16 @@
 #include <iostream>
 using namespace std;
 
+void print::Print() {
+	cout << "Welcome to play Sudoku." << endl;
+	cout << "Are you ready to play sudoku ? [enter 1 (yes) or 0 (no)]" << endl;
+}
 void print::printRules() {
 	cout << "Please abide by the following rules." << endl;
 	cout << "rule 1- Each row and column must contain the numbers from 1 to 4, without repetitions." << endl;
 	cout << "rule 2- The digits can only occur once per block." << endl;
 	cout << "rule 3- The sum of every single row and column  must equal 10." << endl;
-	cout << "rule 4- When you want to change the sudoku's number. Please enter x(row),y(column),number" << endl;
+	cout << "rule 4- When you want to change the sudoku's number. Please enter x,y,number" << endl;
 	cout << endl;
 }
 void print::printSudoku() {

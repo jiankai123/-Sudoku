@@ -5,8 +5,7 @@ using namespace std;
 #include "print.h"
 
 int main() {
-	cout << "Welcome to play Sudoku." << endl;
-	cout << "Are you ready to play sudoku ? [enter 1 (yes) or 0 (no)]" << endl;
+	print::Print();
 	int ans1;//player's answer
 	cin >> ans1;
 	cout << endl;
@@ -35,19 +34,20 @@ int main() {
 		//int x1, y1;
 		//x1 = Data.getX() - 1;
 		//y1 = Data.getY() - 1;
-		if(Data.getElement() != 0)
+		if (Data.getElement() != 0) {
 			sudoList[Data.getY() - 1][Data.getX() - 1] = Data.getElement();
 
-		for (int i = 0; i < 4; i++) {
-			for (int j = 0; j < 4; j++) {
-				if (sudoList[i][j] == -1)
-					cout << " ? ";
-				else
-					cout << " " << sudoList[i][j] << " ";
+			for (int i = 0; i < 4; i++) {
+				for (int j = 0; j < 4; j++) {
+					if (sudoList[i][j] == -1)
+						cout << " ? ";
+					else
+						cout << " " << sudoList[i][j] << " ";
+				}
+				cout << endl;
 			}
 			cout << endl;
 		}
-		cout << endl;
 	}
 
 	//check enswer
@@ -85,3 +85,69 @@ int main() {
 		cout << "Congratulaions ~" << endl;
 	}
 }
+/*
+#include <iostream>
+#include <cstdlib>
+#include <ctime>
+using namespace std;
+int main()
+{
+	srand(time(0));
+	int a[9][9];
+	int i1,j1,isUse;
+	int row = 9, col = 9;
+	int startRow = row - row % 3, startCol = col - col % 3;
+	for (int i = 0; i < 9; i++)
+	{
+		for (int j = 0; j < 9; j++)
+		{
+			do {
+			isUse = 0;
+			a [i][j] = rand() % 10;
+
+			for (int i2 = 0; i2 < 3; i2++)
+			{
+				for (int j2 = 0; j2 < 3; j2++)
+				{
+					if (a[i + startRow][j + startCol] == a[i2][j2])
+					{
+						isUse = 1;
+						break;
+					}
+				}
+				break;
+			}
+
+
+			} while (isUse==1);
+			cout << a[i][j] << " " ;
+		}
+		cout << endl;
+	}
+
+}*/
+
+/*
+int N=9;
+bool isSafe(int grid[N][N], int row, int col, int num)
+{
+
+	for (int x = 0; x < 4; x++)
+		if (grid[row][x] == num)
+			return false;
+
+	for (int i = 0; i < 4; i++)
+		if (grid[i][col] == num)
+			return false;
+
+	int startRow = row - row % 3, startCol = col - col % 3;
+
+	for (int i = 0; i < 3; i++)
+
+		for (int j = 0; j < 3; j++)
+
+			if (grid[i + startRow][j + startCol] == num)
+				return false;
+	
+	return true;
+}*/
