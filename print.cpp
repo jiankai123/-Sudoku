@@ -13,6 +13,7 @@ void print::printRules() {
 	cout << "rule 2- The digits can only occur once per block." << endl;
 	cout << "rule 3- The sum of every single row and column  must equal 10." << endl;
 	cout << "rule 4- When you want to change the sudoku's number. Please enter x,y,number" << endl;
+	cout << "rule 5- Enter number 0 to exit game." << endl;
 	cout << endl;
 }
 void print::printSudoku() {
